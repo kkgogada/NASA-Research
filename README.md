@@ -3,6 +3,8 @@
 An independent, student-built research tool for discovering NASA missions, research areas and
 imagery in one organised interface.
 
+**Live: https://kkgogada.github.io/NASA-Research/**
+
 > **This is not an official NASA product.** It is not affiliated with, endorsed by, or produced by
 > NASA. It does not use NASA's insignia, logotype or official branding. Mission and programme names
 > are used descriptively to refer to publicly documented work. Cite the original NASA sources — not
@@ -292,7 +294,7 @@ honest; a filled-in one that cannot be sourced is not.
 - [x] Establish a consistent data and provenance structure
 - [x] Publish the first interactive study with full data provenance
 - [x] Add figures, automated checks and plain-language summaries
-- [ ] Deploy the application to a public URL
+- [x] Deploy the application to a public URL
 - [ ] Expand mission and topic coverage beyond the current curated set
 - [ ] Add reproducible analysis notebooks alongside the application
 
