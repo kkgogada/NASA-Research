@@ -1,0 +1,32 @@
+name: Check source links
+
+# NASA reorganises its site periodically, and a dead source link quietly breaks
+# the central promise of this project: that every fact is verifiable. This runs
+# weekly so link rot is found by a schedule rather than by a reader.
+#
+# Deliberately separate from the deploy workflow: a NASA outage or a rate limit
+# must never be able to block a deployment.
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Mondays, 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Fails the run if any of the cited source URLs stops resolving.
+      - name: Verify every cited source URL resolves
+        run: npm run check:links
