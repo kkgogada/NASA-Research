@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.vite/
+
+# Generated data IS committed on purpose: it is a dated snapshot the UI
+# attributes and displays, so it must travel with the code it describes.
+# Refresh it with `npm run generate-data`, don't ignore it.

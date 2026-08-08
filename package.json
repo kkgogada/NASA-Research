@@ -1,0 +1,23 @@
+{
+  "name": "nasa-research-explorer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An independent educational tool for discovering NASA missions, research topics, and imagery. Not affiliated with NASA.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-data": "node scripts/generate-data.mjs",
+    "check": "node scripts/check.mjs",
+    "check:links": "node scripts/check.mjs --links"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
