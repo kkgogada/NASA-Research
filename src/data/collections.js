@@ -27,8 +27,8 @@ export const COLLECTIONS = [
     id: 'return-to-the-moon',
     title: 'Returning humans to the Moon',
     blurb:
-      'The step-by-step logic of the Artemis programme, and the long-duration health research aboard the space station that underpins it.',
-    missions: ['artemis-i', 'artemis-ii', 'iss'],
+      'From the first landing to the step-by-step logic of the Artemis programme, and the long-duration health research aboard the space station that underpins it.',
+    missions: ['apollo-11', 'artemis-i', 'artemis-ii', 'iss'],
     topics: ['human-spaceflight', 'space-technology'],
     imageKey: 'artemis',
   },
@@ -49,6 +49,24 @@ export const COLLECTIONS = [
     missions: ['voyager', 'new-horizons', 'cassini'],
     topics: ['planetary-science', 'heliophysics'],
     imageKey: 'voyager',
+  },
+  {
+    id: 'finding-other-worlds',
+    title: 'Finding planets around other stars',
+    blurb:
+      'How a field went from zero known exoplanets to thousands: one telescope that stared at a single patch of sky, one that surveys all of it, and one that can read an atmosphere.',
+    missions: ['kepler', 'tess', 'webb', 'spitzer'],
+    topics: ['astrophysics'],
+    imageKey: 'kepler',
+  },
+  {
+    id: 'watching-earth-change',
+    title: 'Measuring a changing planet',
+    blurb:
+      'Ice height, ocean colour, surface water and the planet’s energy balance — four missions whose value comes from measuring the same thing the same way for years.',
+    missions: ['icesat-2', 'pace', 'swot', 'terra'],
+    topics: ['earth-science'],
+    imageKey: 'icesat-2',
   },
   {
     id: 'flight-research',

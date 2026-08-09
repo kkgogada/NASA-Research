@@ -846,6 +846,546 @@ export const MISSIONS = [
       { label: 'NASA — X-59 aircraft', url: 'https://www.nasa.gov/x-59/' },
     ],
   },
+  {
+    slug: 'apollo-11',
+    name: 'Apollo 11',
+    program: 'Apollo',
+    agency: 'NASA',
+    status: 'completed',
+    kind: 'Crewed lunar landing',
+    destination: 'The Moon — Mare Tranquillitatis',
+    destinationClass: 'Moon',
+    launch: { date: '1969-07-16', vehicle: 'Saturn V', site: 'Kennedy Space Center, Florida' },
+    arrival: { date: '1969-07-20', label: 'Lunar module Eagle landed in the Sea of Tranquility' },
+    ended: { date: '1969-07-24', label: 'Splashdown in the Pacific Ocean' },
+    topics: ['human-spaceflight'],
+    imageKey: 'apollo-11',
+    purpose:
+      'Land astronauts on the Moon, carry out surface science, and return them safely to Earth.',
+    objectives: [
+      'Perform the first crewed landing on the surface of the Moon.',
+      'Collect lunar rock and soil samples for study on Earth.',
+      'Deploy a small package of scientific instruments on the surface.',
+      'Demonstrate that a crew could land, work outside, launch again and return safely.',
+    ],
+    instruments: [
+      { name: 'Lunar module (Eagle)', role: 'Carried two astronauts to the surface and back to lunar orbit.' },
+      { name: 'Command and service module (Columbia)', role: 'Remained in lunar orbit with the third crew member and returned the crew to Earth.' },
+      { name: 'Passive seismic experiment', role: 'Listened for moonquakes and meteoroid impacts after the crew departed.' },
+      { name: 'Laser ranging retroreflector', role: 'A mirror array still used from Earth to measure the distance to the Moon.' },
+      { name: 'Solar wind composition experiment', role: 'A foil sheet exposed on the surface to catch particles streaming from the Sun.' },
+    ],
+    keyQuestions: [
+      'Can a crew land on another world, work on its surface and return alive?',
+      'What is the Moon made of, and what does that say about how it formed?',
+      'Is the Moon geologically active, or seismically quiet?',
+      'How precisely can the Earth–Moon distance be measured?',
+    ],
+    relationships: [
+      { slug: 'artemis-i', how: 'Artemis is the programme returning crews to the Moon more than half a century later.' },
+    ],
+    terms: ['regolith', 'sample-return', 'seismometer'],
+    overview:
+      'Apollo 11 put two people on the Moon and brought all three crew members home. Two flew the lunar module down to a basaltic plain called the Sea of Tranquility while the third stayed in orbit aboard the command module. The surface stay was short — a single excursion — but it was not only symbolic: the crew collected rock and soil, and left instruments behind that kept working after they had gone. One of them, a mirror array for bouncing lasers off, is still in use today, which makes it among the longest-running experiments in planetary science.',
+    whyItMatters:
+      'The returned samples are still being re-analysed with techniques that did not exist in 1969 — the clearest demonstration of why bringing material back is worth the difficulty.',
+    sources: [
+      { label: 'NASA — Apollo 11', url: 'https://www.nasa.gov/mission/apollo-11/' },
+      { label: 'NASA — The Apollo Program', url: 'https://www.nasa.gov/the-apollo-program/' },
+    ],
+  },
+
+  {
+    slug: 'chandra',
+    name: 'Chandra X-ray Observatory',
+    program: 'Great Observatories',
+    agency: 'NASA / Smithsonian Astrophysical Observatory',
+    status: 'active',
+    kind: 'Space telescope',
+    destination: 'High Earth orbit',
+    destinationClass: 'Earth orbit',
+    launch: { date: '1999-07-23', vehicle: 'Space Shuttle Columbia (STS-93)', site: 'Kennedy Space Center, Florida' },
+    arrival: null,
+    topics: ['astrophysics'],
+    imageKey: 'chandra',
+    purpose:
+      'Observe the universe in X-rays to study the hottest and most energetic processes in the cosmos.',
+    objectives: [
+      'Image X-ray sources at high angular resolution.',
+      'Study the remnants of exploded stars and the hot gas that fills galaxy clusters.',
+      'Observe matter falling towards black holes and neutron stars.',
+      'Measure the composition and temperature of hot cosmic plasma through X-ray spectroscopy.',
+    ],
+    instruments: [
+      { name: 'ACIS', role: 'Advanced CCD Imaging Spectrometer — images and measures the energy of each X-ray.' },
+      { name: 'HRC', role: 'High Resolution Camera — the finest spatial detail Chandra can achieve.' },
+      { name: 'HETG / LETG', role: 'Transmission gratings that spread X-rays into a spectrum for detailed chemistry.' },
+    ],
+    keyQuestions: [
+      'What happens to matter as it falls into a black hole?',
+      'How is the hot gas between galaxies in a cluster distributed and heated?',
+      'What elements are forged and scattered when a massive star explodes?',
+    ],
+    relationships: [
+      { slug: 'hubble', how: 'Companion Great Observatory; the two often observe the same object at different wavelengths.' },
+      { slug: 'spitzer', how: 'Both are Great Observatories covering wavelengths the human eye cannot see.' },
+    ],
+    terms: ['spectroscopy', 'plasma', 'x-ray'],
+    overview:
+      'X-rays do not reflect off mirrors the way visible light does — strike a mirror head-on and they are absorbed. Chandra therefore uses nested mirrors set almost parallel to the incoming light, so X-rays graze off them at a shallow angle and are funnelled to a focus. Because Earth’s atmosphere blocks X-rays entirely, this can only be done from space. What it reveals is the violent universe: gas at millions of degrees, matter spiralling into black holes, and the debris of exploded stars.',
+    whyItMatters:
+      'Much of the ordinary matter in the universe is not in stars at all but in hot, thin gas that emits only in X-rays — invisible to every other kind of telescope.',
+    sources: [
+      { label: 'NASA Science — Chandra X-ray Observatory', url: 'https://science.nasa.gov/mission/chandra/' },
+      { label: 'Chandra X-ray Center', url: 'https://chandra.harvard.edu/' },
+    ],
+  },
+
+  {
+    slug: 'kepler',
+    name: 'Kepler',
+    program: 'Discovery',
+    agency: 'NASA / Ames Research Center',
+    status: 'completed',
+    kind: 'Space telescope',
+    destination: 'Earth-trailing solar orbit',
+    destinationClass: 'Deep space',
+    launch: { date: '2009-03-07', vehicle: 'Delta II', site: 'Cape Canaveral, Florida' },
+    arrival: null,
+    ended: { date: '2018-10-30', label: 'Retired after running out of fuel' },
+    topics: ['astrophysics'],
+    imageKey: 'kepler',
+    purpose:
+      'Determine how common Earth-sized planets are by watching a single patch of sky for the tiny dimmings caused by planets crossing their stars.',
+    objectives: [
+      'Survey a large sample of stars continuously for planetary transits.',
+      'Measure how many stars host planets, and of what sizes and orbital periods.',
+      'Find planets in the habitable zone, where liquid water could exist on a surface.',
+    ],
+    instruments: [
+      { name: 'Photometer', role: 'A wide-field telescope that measured tiny changes in the brightness of many stars at once.' },
+    ],
+    keyQuestions: [
+      'How common are planets around other stars?',
+      'How many stars have a planet roughly the size of Earth in the habitable zone?',
+      'What range of planet sizes and orbits actually exists?',
+    ],
+    relationships: [
+      { slug: 'tess', how: 'TESS extended the transit search to the whole sky and to nearer, brighter stars.' },
+      { slug: 'webb', how: 'Webb can study the atmospheres of planets first found by transit surveys.' },
+    ],
+    terms: ['exoplanet', 'transit-method', 'habitability'],
+    overview:
+      'Kepler answered a question by staring. It pointed at one patch of sky towards Cygnus and Lyra and measured the brightness of about 150,000 stars continuously, looking for the fractional dip that occurs when a planet passes in front of its star. Any single dip means little; a dip that repeats on a regular period is a planet. When two of its reaction wheels failed, the spacecraft could no longer hold that steady stare, and it was repurposed as K2, surveying along the plane of Earth’s orbit until its fuel ran out.',
+    whyItMatters:
+      'Before Kepler, nobody knew whether planetary systems were common or rare. Afterwards it was clear that planets outnumber stars, which reframed the search for life from a long shot to a statistical question.',
+    sources: [
+      { label: 'NASA Science — Kepler', url: 'https://science.nasa.gov/mission/kepler/' },
+      { label: 'NASA Exoplanet Archive', url: 'https://exoplanetarchive.ipac.caltech.edu/' },
+    ],
+  },
+
+  {
+    slug: 'tess',
+    name: 'TESS',
+    program: 'Explorers',
+    agency: 'NASA / MIT',
+    status: 'active',
+    kind: 'Space telescope',
+    destination: 'High Earth orbit in resonance with the Moon',
+    destinationClass: 'Earth orbit',
+    launch: { date: '2018-04-18', vehicle: 'Falcon 9', site: 'Cape Canaveral, Florida' },
+    arrival: null,
+    topics: ['astrophysics'],
+    imageKey: 'tess',
+    purpose:
+      'Survey almost the entire sky for planets transiting nearby bright stars, producing targets that other telescopes can study in detail.',
+    objectives: [
+      'Search bright, nearby stars across nearly the whole sky for transiting planets.',
+      'Find planets close enough and bright enough for follow-up atmospheric study.',
+      'Measure the sizes and orbits of the planets it detects.',
+    ],
+    instruments: [
+      { name: 'Four wide-field cameras', role: 'Together they observe a tall strip of sky at once, moving sector by sector.' },
+    ],
+    keyQuestions: [
+      'Which nearby stars host transiting planets?',
+      'Which of those planets are the best candidates for atmospheric study?',
+      'How do planetary systems around nearby stars compare with our own?',
+    ],
+    relationships: [
+      { slug: 'kepler', how: 'Successor in method — the same transit technique, applied to the whole sky rather than one patch.' },
+      { slug: 'webb', how: 'Supplies bright, nearby targets whose atmospheres Webb can then examine.' },
+    ],
+    terms: ['exoplanet', 'transit-method'],
+    overview:
+      'Kepler measured how common planets are; TESS finds the ones close enough to study. It surveys the sky in sectors, watching bright nearby stars for transits. The distinction matters because atmospheric study needs photons: a planet around a faint, distant star may be confirmed but can never be characterised, whereas one around a bright neighbour can have its atmosphere probed by a telescope like Webb. Its orbit is unusual — a long ellipse locked in a two-to-one resonance with the Moon, which keeps it stable with almost no fuel.',
+    whyItMatters:
+      'Nearly every exoplanet whose atmosphere is now being examined in detail started as a transit signal from a survey like this one.',
+    sources: [
+      { label: 'NASA Science — TESS', url: 'https://science.nasa.gov/mission/tess/' },
+    ],
+  },
+
+  {
+    slug: 'spitzer',
+    name: 'Spitzer Space Telescope',
+    program: 'Great Observatories',
+    agency: 'NASA / Jet Propulsion Laboratory',
+    status: 'completed',
+    kind: 'Space telescope',
+    destination: 'Earth-trailing solar orbit',
+    destinationClass: 'Deep space',
+    launch: { date: '2003-08-25', vehicle: 'Delta II', site: 'Cape Canaveral, Florida' },
+    arrival: null,
+    ended: { date: '2020-01-30', label: 'Mission concluded and spacecraft placed in safe mode' },
+    topics: ['astrophysics'],
+    imageKey: 'spitzer',
+    purpose:
+      'Observe the universe in infrared light, seeing through dust to reach objects too cool or too obscured for visible-light telescopes.',
+    objectives: [
+      'Study star formation inside dust clouds that block visible light.',
+      'Observe cool objects such as brown dwarfs and dusty discs around young stars.',
+      'Detect and characterise light from exoplanets.',
+      'Survey distant galaxies whose light has been stretched into the infrared.',
+    ],
+    instruments: [
+      { name: 'IRAC', role: 'Infrared Array Camera — imaging at four infrared wavelengths.' },
+      { name: 'IRS', role: 'Infrared Spectrograph — split infrared light to identify materials.' },
+      { name: 'MIPS', role: 'Multiband Imaging Photometer — imaging at longer, cooler infrared wavelengths.' },
+    ],
+    keyQuestions: [
+      'What is happening inside the dust clouds where stars are born?',
+      'What are the coolest objects in the galaxy made of?',
+      'What can infrared light reveal about planets around other stars?',
+    ],
+    relationships: [
+      { slug: 'webb', how: 'Webb continues and greatly extends infrared astronomy from space.' },
+      { slug: 'chandra', how: 'Both are Great Observatories, covering opposite ends of the spectrum.' },
+    ],
+    terms: ['infrared', 'spectroscopy', 'exoplanet'],
+    overview:
+      'Spitzer trailed behind Earth in its orbit around the Sun, drifting slowly further away each year. That was deliberate: away from Earth’s heat, the telescope could stay extremely cold, which is essential for infrared work because a warm telescope glows in the very light it is trying to detect. It carried liquid helium to keep its instruments cold; when that ran out in 2009 the mission continued in a warm phase using the two shortest-wavelength channels, which needed less cooling.',
+    whyItMatters:
+      'Spitzer demonstrated that infrared space telescopes could study exoplanet atmospheres at all — a capability that shaped what Webb was designed to do.',
+    sources: [
+      { label: 'NASA Science — Spitzer Space Telescope', url: 'https://science.nasa.gov/mission/spitzer/' },
+    ],
+  },
+
+  {
+    slug: 'sdo',
+    name: 'Solar Dynamics Observatory',
+    program: 'Living With a Star',
+    agency: 'NASA / Goddard Space Flight Center',
+    status: 'active',
+    kind: 'Solar observatory',
+    destination: 'Geosynchronous Earth orbit',
+    destinationClass: 'Earth orbit',
+    launch: { date: '2010-02-11', vehicle: 'Atlas V 401', site: 'Cape Canaveral, Florida' },
+    arrival: null,
+    topics: ['heliophysics'],
+    imageKey: 'sdo',
+    purpose:
+      'Observe the Sun continuously at high cadence and resolution to understand how its magnetic field drives solar activity.',
+    objectives: [
+      'Image the Sun in many wavelengths at high time resolution, without interruption.',
+      'Map the Sun’s surface magnetic field and probe its interior through helioseismology.',
+      'Measure the Sun’s extreme-ultraviolet output, which drives changes in Earth’s upper atmosphere.',
+    ],
+    instruments: [
+      { name: 'AIA', role: 'Atmospheric Imaging Assembly — images the solar atmosphere in several ultraviolet wavelengths every few seconds.' },
+      { name: 'HMI', role: 'Helioseismic and Magnetic Imager — maps surface magnetic fields and motions to probe the interior.' },
+      { name: 'EVE', role: 'EUV Variability Experiment — measures the Sun’s extreme-ultraviolet output.' },
+    ],
+    keyQuestions: [
+      'How is the Sun’s magnetic field generated and reorganised?',
+      'What triggers a solar flare or a coronal mass ejection?',
+      'How does the Sun’s changing output affect Earth’s upper atmosphere?',
+    ],
+    relationships: [
+      { slug: 'parker-solar-probe', how: 'SDO watches the whole Sun from a distance while Parker samples the corona directly.' },
+    ],
+    terms: ['corona', 'space-weather', 'plasma', 'geosynchronous-orbit'],
+    overview:
+      'SDO sits in an orbit that keeps it in near-constant view of both the Sun and a single ground station, so it can return an enormous, uninterrupted stream of images. It photographs the Sun every few seconds in multiple ultraviolet wavelengths, each of which corresponds to gas at a different temperature — so switching between them is effectively switching between layers of the solar atmosphere. The result is less a set of photographs than a continuous film of the Sun’s magnetic behaviour running for over a decade.',
+    whyItMatters:
+      'Space-weather forecasting depends on watching the Sun continuously; a gap in coverage is a gap in warning.',
+    sources: [
+      { label: 'NASA Science — Solar Dynamics Observatory', url: 'https://science.nasa.gov/mission/sdo/' },
+    ],
+  },
+
+  {
+    slug: 'mms',
+    name: 'Magnetospheric Multiscale',
+    program: 'Solar Terrestrial Probes',
+    agency: 'NASA / Goddard Space Flight Center',
+    status: 'active',
+    kind: 'Four-spacecraft formation',
+    destination: 'Earth’s magnetosphere',
+    destinationClass: 'Earth orbit',
+    launch: { date: '2015-03-12', vehicle: 'Atlas V 421', site: 'Cape Canaveral, Florida' },
+    arrival: null,
+    topics: ['heliophysics'],
+    imageKey: 'mms',
+    purpose:
+      'Study magnetic reconnection — the process by which magnetic field lines break and reconnect, releasing energy — by flying four spacecraft in tight formation.',
+    objectives: [
+      'Measure magnetic reconnection directly, at the small scale where it actually happens.',
+      'Determine how reconnection converts magnetic energy into particle energy.',
+      'Study the boundary where the solar wind meets Earth’s magnetic field.',
+    ],
+    instruments: [
+      { name: 'FIELDS suite', role: 'Measures electric and magnetic fields across all four spacecraft.' },
+      { name: 'Fast Plasma Investigation', role: 'Samples electrons and ions far faster than earlier instruments could.' },
+      { name: 'Hot Plasma Composition Analyser', role: 'Identifies which ion species are present and how energetic they are.' },
+    ],
+    keyQuestions: [
+      'How exactly do magnetic field lines break and reconnect?',
+      'Where does the released energy go, and how quickly?',
+      'How does reconnection at Earth’s magnetic boundary drive space weather?',
+    ],
+    relationships: [
+      { slug: 'sdo', how: 'Reconnection studied at Earth is the same process that powers flares SDO observes on the Sun.' },
+      { slug: 'parker-solar-probe', how: 'Both study how magnetic fields transfer energy to charged particles.' },
+    ],
+    terms: ['magnetic-reconnection', 'magnetosphere', 'plasma', 'space-weather'],
+    overview:
+      'Magnetic reconnection is the process behind solar flares, auroras and many space-weather disturbances, but it happens in a region only a few kilometres across, and it happens fast. A single spacecraft flying through cannot tell whether a change it measures is happening in time or simply moving past it in space. MMS solves that with four identical spacecraft flying in a pyramid formation, sometimes only a few kilometres apart, sampling the same region at once so the structure can be reconstructed in three dimensions.',
+    whyItMatters:
+      'Reconnection converts stored magnetic energy into fast particles throughout the universe — in solar flares, around other stars and inside fusion reactors on Earth.',
+    sources: [
+      { label: 'NASA Science — Magnetospheric Multiscale', url: 'https://science.nasa.gov/mission/mms/' },
+    ],
+  },
+
+  {
+    slug: 'icesat-2',
+    name: 'ICESat-2',
+    program: 'Earth Systematic Missions',
+    agency: 'NASA / Goddard Space Flight Center',
+    status: 'active',
+    kind: 'Earth-observing satellite',
+    destination: 'Polar Earth orbit',
+    destinationClass: 'Earth orbit',
+    launch: { date: '2018-09-15', vehicle: 'Delta II', site: 'Vandenberg Space Force Base, California' },
+    arrival: null,
+    topics: ['earth-science'],
+    imageKey: 'icesat-2',
+    purpose:
+      'Measure the changing height of Earth’s ice sheets, glaciers and sea ice with a photon-counting laser altimeter.',
+    objectives: [
+      'Track how the elevation of the Greenland and Antarctic ice sheets is changing.',
+      'Measure the thickness of floating sea ice.',
+      'Measure vegetation canopy height to estimate how much carbon forests store.',
+    ],
+    instruments: [
+      { name: 'ATLAS', role: 'Advanced Topographic Laser Altimeter System — fires 10,000 laser pulses a second and times individual returning photons.' },
+    ],
+    keyQuestions: [
+      'How fast are the ice sheets losing or gaining mass, and where?',
+      'How is the thickness of Arctic sea ice changing, not just its area?',
+      'How much carbon is held in the world’s forests?',
+    ],
+    relationships: [
+      { slug: 'swot', how: 'Complementary altimetry — ICESat-2 measures ice and land elevation, SWOT measures water height.' },
+      { slug: 'landsat-9', how: 'Landsat images what the surface looks like; ICESat-2 measures how tall it is.' },
+    ],
+    terms: ['altimetry', 'cryosphere', 'time-series'],
+    overview:
+      'ICESat-2 measures height by timing light. Its laser fires ten thousand pulses a second, and the instrument is sensitive enough to time the return of individual photons — enough to detect a change in ice elevation smaller than the width of a pencil. Sea ice matters especially: satellites have tracked its area for decades, but area alone hides the story. Ice can cover the same extent while being far thinner, and thickness is what determines how much is actually there.',
+    whyItMatters:
+      'Ice-sheet loss is the largest uncertainty in sea-level projections, and it is a question of elevation change measured over years — precisely what this instrument was built to do.',
+    sources: [
+      { label: 'NASA Science — ICESat-2', url: 'https://science.nasa.gov/mission/icesat-2/' },
+    ],
+  },
+
+  {
+    slug: 'pace',
+    name: 'PACE',
+    program: 'Earth Systematic Missions',
+    agency: 'NASA / Goddard Space Flight Center',
+    status: 'active',
+    kind: 'Earth-observing satellite',
+    destination: 'Polar Earth orbit',
+    destinationClass: 'Earth orbit',
+    launch: { date: '2024-02-08', vehicle: 'Falcon 9', site: 'Cape Canaveral, Florida' },
+    arrival: null,
+    topics: ['earth-science'],
+    imageKey: 'pace',
+    purpose:
+      'Study ocean colour, aerosols and clouds to understand how the ocean and atmosphere exchange carbon and energy.',
+    objectives: [
+      'Identify the types of phytoplankton in the ocean, not just how much there is.',
+      'Measure aerosols and clouds to reduce uncertainty in how they affect climate.',
+      'Track ocean health, harmful algal blooms and the ocean’s role in the carbon cycle.',
+    ],
+    instruments: [
+      { name: 'OCI', role: 'Ocean Colour Instrument — a hyperspectral sensor measuring the colour of the ocean in fine detail.' },
+      { name: 'SPEXone', role: 'Polarimeter measuring how aerosols scatter and polarise light.' },
+      { name: 'HARP2', role: 'Wide-angle polarimeter viewing each scene from many directions at once.' },
+    ],
+    keyQuestions: [
+      'Which kinds of phytoplankton live where, and how is that changing?',
+      'How do aerosols and clouds interact, and how much do they cool or warm the planet?',
+      'How much carbon does the ocean take up, and what controls it?',
+    ],
+    relationships: [
+      { slug: 'terra', how: 'Continues and refines the ocean-colour and aerosol record begun by MODIS.' },
+      { slug: 'swot', how: 'Both study the ocean — PACE its biology and colour, SWOT its surface height and circulation.' },
+    ],
+    terms: ['ocean-colour', 'remote-sensing', 'multispectral'],
+    overview:
+      'The colour of the ocean is a measurement, not an aesthetic. Different microscopic organisms absorb and reflect light differently, so the precise shade of a patch of sea carries information about what is living in it. Earlier instruments saw a handful of colour bands and could estimate how much plant life was present; PACE sees a continuous spectrum, which allows it to distinguish between kinds of phytoplankton. Since those organisms sit at the base of the marine food web and draw down carbon dioxide, knowing which ones are where matters for both ecology and climate.',
+    whyItMatters:
+      'Aerosol and cloud behaviour remains one of the largest uncertainties in climate projections, and this mission measures both alongside the ocean biology they interact with.',
+    sources: [
+      { label: 'NASA Science — PACE', url: 'https://science.nasa.gov/mission/pace/' },
+    ],
+  },
+
+  {
+    slug: 'terra',
+    name: 'Terra',
+    program: 'Earth Observing System',
+    agency: 'NASA with Japan and Canada',
+    status: 'active',
+    kind: 'Earth-observing satellite',
+    destination: 'Polar Earth orbit',
+    destinationClass: 'Earth orbit',
+    launch: { date: '1999-12-18', vehicle: 'Atlas IIAS', site: 'Vandenberg Space Force Base, California' },
+    arrival: null,
+    topics: ['earth-science'],
+    imageKey: 'terra',
+    purpose:
+      'Observe Earth’s land, oceans, atmosphere and energy budget together, as a connected system, over decades.',
+    objectives: [
+      'Measure how much sunlight Earth reflects and how much heat it radiates.',
+      'Monitor land cover, vegetation, fires, snow and ice worldwide.',
+      'Track clouds, aerosols and atmospheric pollution.',
+      'Maintain a consistent long-term record for climate research.',
+    ],
+    instruments: [
+      { name: 'MODIS', role: 'Images nearly the entire planet daily in 36 wavelength bands — the source of many NASA Worldview layers.' },
+      { name: 'ASTER', role: 'High-resolution imaging of land surface temperature, elevation and reflectance.' },
+      { name: 'CERES', role: 'Measures Earth’s radiation budget — the balance of incoming and outgoing energy.' },
+      { name: 'MISR', role: 'Views each scene from nine angles to study aerosols and cloud structure.' },
+      { name: 'MOPITT', role: 'Measures carbon monoxide in the troposphere.' },
+    ],
+    keyQuestions: [
+      'Is Earth absorbing more energy than it radiates back to space?',
+      'How are land cover, vegetation and fire regimes changing worldwide?',
+      'How do aerosols and clouds interact across the whole planet?',
+    ],
+    relationships: [
+      { slug: 'landsat-9', how: 'Landsat images land at fine detail; Terra covers the whole planet daily at coarser scale.' },
+      { slug: 'pace', how: 'PACE extends the ocean-colour and aerosol measurements MODIS pioneered.' },
+    ],
+    terms: ['remote-sensing', 'multispectral', 'time-series', 'radiation-budget'],
+    overview:
+      'Terra was built to study Earth as one system rather than as separate subjects, carrying five instruments that observe land, ocean, atmosphere and radiation simultaneously. Its MODIS instrument images nearly the whole planet every day, and those images underpin a great many of the daily global layers people now take for granted — including several shown on the Earth science page of this app. Designed for six years, it has operated for more than two decades, which is what turned it from an observing mission into a climate record.',
+    whyItMatters:
+      'A measurement becomes a climate record only when the same instrument keeps measuring the same way for decades; Terra is one of the few that has.',
+    sources: [
+      { label: 'NASA Science — Terra', url: 'https://science.nasa.gov/mission/terra/' },
+      { label: 'NASA Worldview (Terra imagery)', url: 'https://worldview.earthdata.nasa.gov/' },
+    ],
+  },
+
+  {
+    slug: 'dart',
+    name: 'DART',
+    program: 'Planetary defence',
+    agency: 'NASA / Johns Hopkins Applied Physics Laboratory',
+    status: 'completed',
+    kind: 'Kinetic impactor test',
+    destination: 'Dimorphos, a moonlet of asteroid Didymos',
+    destinationClass: 'Small bodies',
+    launch: { date: '2021-11-24', vehicle: 'Falcon 9', site: 'Vandenberg Space Force Base, California' },
+    arrival: { date: '2022-09-26', label: 'Deliberate impact into Dimorphos' },
+    ended: { date: '2022-09-26', label: 'Spacecraft destroyed on impact, as designed' },
+    topics: ['planetary-science', 'space-technology'],
+    imageKey: 'dart',
+    purpose:
+      'Test whether deliberately crashing a spacecraft into an asteroid can measurably change its orbit.',
+    objectives: [
+      'Strike a small asteroid moonlet at high speed and change its orbital period.',
+      'Measure the change from Earth using telescopes, to confirm the technique works.',
+      'Demonstrate autonomous navigation onto a body never seen close up before.',
+    ],
+    instruments: [
+      { name: 'DRACO', role: 'The only instrument — a camera used both for science and for autonomously steering the spacecraft into its target.' },
+      { name: 'SMART Nav', role: 'Autonomous navigation software that identified and tracked the target in the final hour.' },
+      { name: 'LICIACube (ASI)', role: 'A small Italian cubesat released beforehand to photograph the impact and its debris.' },
+    ],
+    keyQuestions: [
+      'Can a kinetic impact measurably change an asteroid’s orbit?',
+      'How much does ejected debris add to the push, beyond the impact itself?',
+      'Can a spacecraft navigate itself onto a target too small to be resolved until minutes before arrival?',
+    ],
+    relationships: [
+      { slug: 'osiris-rex', how: 'Both are small-body missions; OSIRIS-REx sampled an asteroid, DART deflected one.' },
+    ],
+    terms: ['kinetic-impactor', 'planetary-defence', 'near-earth-object', 'autonomy'],
+    overview:
+      'DART was a test with a deliberately simple design: fly a spacecraft into a small asteroid and see whether the impact changes its orbit by a measurable amount. The target, Dimorphos, orbits a larger asteroid called Didymos, which made the experiment possible — measuring a change in a small moonlet’s orbit around its companion is far easier from Earth than measuring a change in an asteroid’s orbit around the Sun. Neither body posed any threat; the point was to find out whether the technique works before it is ever needed.',
+    whyItMatters:
+      'It moved asteroid deflection from a calculation to a demonstrated capability — the only natural disaster humans might in principle prevent entirely.',
+    sources: [
+      { label: 'NASA Science — DART', url: 'https://science.nasa.gov/mission/dart/' },
+      { label: 'NASA — Planetary Defense Coordination Office', url: 'https://science.nasa.gov/planetary-defense/' },
+    ],
+  },
+
+  {
+    slug: 'insight',
+    name: 'InSight',
+    program: 'Discovery',
+    agency: 'NASA / Jet Propulsion Laboratory',
+    status: 'completed',
+    kind: 'Stationary lander',
+    destination: 'Mars — Elysium Planitia',
+    destinationClass: 'Mars',
+    launch: { date: '2018-05-05', vehicle: 'Atlas V 401', site: 'Vandenberg Space Force Base, California' },
+    arrival: { date: '2018-11-26', label: 'Landed on Elysium Planitia' },
+    ended: {
+      date: null,
+      label: 'Operations ended in December 2022 as dust on the solar panels cut available power. This project does not assert a specific end date — see the official mission page.',
+    },
+    topics: ['planetary-science', 'robotics'],
+    imageKey: 'insight',
+    purpose:
+      'Study the deep interior of Mars by listening for marsquakes and measuring how the planet wobbles and conducts heat.',
+    objectives: [
+      'Detect and locate marsquakes to map the interior structure of the planet.',
+      'Measure the size, composition and state of the core, mantle and crust.',
+      'Measure how much heat still flows out of the planet’s interior.',
+    ],
+    instruments: [
+      { name: 'SEIS', role: 'An extremely sensitive seismometer, placed on the ground by the lander’s arm and shielded from wind.' },
+      { name: 'HP³', role: 'A self-hammering probe intended to burrow below the surface and measure heat flow.' },
+      { name: 'RISE', role: 'Radio science experiment tracking the lander’s position to measure how Mars wobbles as it spins.' },
+    ],
+    keyQuestions: [
+      'Does Mars have a liquid core, and how large is it?',
+      'How thick is the crust, and how is the interior layered?',
+      'Is Mars still seismically active, and how often?',
+    ],
+    relationships: [
+      { slug: 'curiosity', how: 'Curiosity reads Mars’ surface history; InSight listened to its interior.' },
+      { slug: 'perseverance', how: 'Both are Mars surface missions, one mobile and one deliberately stationary.' },
+    ],
+    terms: ['marsquake', 'seismometer', 'stratigraphy'],
+    overview:
+      'Almost every Mars mission before InSight studied the surface. InSight deliberately did not move at all: a stationary lander is a stable platform, and stability is exactly what a seismometer needs. By recording marsquakes and timing how their waves travelled through the planet, it inferred the structure of the crust, mantle and core — the same technique used to map Earth’s interior. Its heat-flow probe, designed to hammer several metres down, could not get purchase in the unexpectedly clumpy soil and never reached its target depth.',
+    whyItMatters:
+      'How a rocky planet is layered inside records how it formed, and Mars is the only other rocky planet whose interior has been measured this way.',
+    sources: [
+      { label: 'NASA Science — InSight', url: 'https://science.nasa.gov/mission/insight/' },
+    ],
+  },
 ]
 
 export const STATUS_META = {

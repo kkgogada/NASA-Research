@@ -73,7 +73,10 @@ export default function TimelinePage() {
     const last = new Date(end).getUTCFullYear()
     const out = []
     for (let y = Math.ceil(first / 5) * 5; y <= last; y += 5) out.push(y)
-    if (out[0] !== first) out.unshift(first)
+    // Label the first year too, but only when it is far enough from the first
+    // five-year tick to not collide with it (Apollo 11 puts the axis at 1969,
+    // one year before the 1970 tick).
+    if (out.length && out[0] - first >= 3) out.unshift(first)
     return out
   }, [start, end])
 

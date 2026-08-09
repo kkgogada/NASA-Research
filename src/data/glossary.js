@@ -63,6 +63,17 @@ export const GLOSSARY = {
   'supersonic': 'Moving faster than the speed of sound in the surrounding air.',
   'teleoperation': 'Controlling a machine remotely, practical only when the signal delay is short.',
   'fault-protection': 'Onboard software that detects problems and puts a spacecraft into a safe state without waiting for Earth.',
+  'x-ray': 'Light far more energetic than ultraviolet, emitted by gas at millions of degrees. It is absorbed by Earth’s atmosphere, so it can only be observed from space.',
+  'transit-method': 'Finding a planet by the small, repeating dip in a star’s brightness as the planet passes in front of it.',
+  'geosynchronous-orbit': 'An orbit with a period matching Earth’s rotation, so a spacecraft stays above roughly the same longitude.',
+  'magnetic-reconnection': 'A process in which magnetic field lines break apart and rejoin, converting stored magnetic energy into fast-moving particles.',
+  'cryosphere': 'The frozen parts of the Earth system — ice sheets, glaciers, sea ice, snow and frozen ground.',
+  'ocean-colour': 'The precise spectrum of light leaving the sea surface, which reveals what is living and suspended in the water.',
+  'radiation-budget': 'The balance between the energy Earth absorbs from the Sun and the energy it radiates back to space.',
+  'kinetic-impactor': 'A method of deflecting an asteroid by deliberately crashing a spacecraft into it to change its speed slightly.',
+  'planetary-defence': 'The work of finding asteroids and comets that could strike Earth, and developing ways to deflect them.',
+  'marsquake': 'A seismic tremor within Mars, detected in the same way earthquakes are, and used to infer the planet’s internal structure.',
+  'seismometer': 'An instrument that detects ground motion, used to locate quakes and to map a body’s interior from how waves travel through it.',
 }
 
 export const defineTerm = (key) => GLOSSARY[key] || null

@@ -80,7 +80,7 @@ These are documented at the top of each file in `src/data/`, and checked by `scr
 3. App-written overviews introduce no facts that are not already present in the sourced fields above
    them on the same page.
 4. **No quotations are reproduced**, from NASA or anyone else.
-5. No mission facts, findings or source links are generated. All 48 cited source URLs are checked to
+5. No mission facts, findings or source links are generated. All 65 cited source URLs are checked to
    resolve.
 6. A mission NASA describes as completed is never drawn as running until today. Where no end date
    is documented, the timeline bar stops at the last attributable milestone and is hatched as
@@ -173,7 +173,7 @@ UI displays and cites, so they must travel with the code that describes them.
 
 ### About the fallback imagery
 
-`src/data/imagery.js` is generated data, not placeholder art. Each of its 49 entries is a real asset
+`src/data/imagery.js` is generated data, not placeholder art. Each of its 85 entries is a real asset
 from the official NASA Image and Video Library: the IDs, titles, dates and centres were read from
 that API, and every URL was verified to resolve. This means the offline state degrades to real,
 attributed NASA material rather than to invented images or broken frames. Reuse of NASA imagery is
@@ -223,9 +223,9 @@ the board page offers a text export that includes both notes and every official 
 ```
 src/
   data/          Curated reference data — the sourcing rules live in file headers
-    missions.js    18 missions with objectives, instruments, timelines, sources
+    missions.js    30 missions with objectives, instruments, timelines, sources
     topics.js      8 research areas
-    glossary.js    58 plain-language term definitions
+    glossary.js    69 plain-language term definitions
     imagery.js     Generated, verified offline imagery set
     collections.js Editorial reading paths + official NASA entry points
     generated/     Build-time snapshots (Exoplanet Archive, TechPort)
@@ -295,7 +295,7 @@ honest; a filled-in one that cannot be sourced is not.
 - [x] Publish the first interactive study with full data provenance
 - [x] Add figures, automated checks and plain-language summaries
 - [x] Deploy the application to a public URL
-- [ ] Expand mission and topic coverage beyond the current curated set
+- [x] Expand mission and topic coverage beyond the current curated set
 - [ ] Add reproducible analysis notebooks alongside the application
 
 ## Contributing
